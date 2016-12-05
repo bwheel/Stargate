@@ -21,7 +21,9 @@ namespace Stargate.Common.Dhds
 
         public IGate Activate()
         {
-            Gate.OpenWormHole(PowerSupply);
+            IDictionary<IGateAddress, IGate> gateSystem = new Dictionary<IGateAddress, IGate>();
+            var nextGate = gateSystem[Address];
+            Gate.OpenWormHole(nextGate, PowerSupply);
             return Gate;
         }
 

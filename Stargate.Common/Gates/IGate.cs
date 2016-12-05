@@ -9,6 +9,12 @@ namespace Stargate.Common.Gates
 {
     public interface IGate : IGameObject
     {
-        void OpenWormHole(IPowerSupply powerSupply);
+        List<IGameObject> Buffer { get; }
+
+        void OpenWormHole(IGate nextGate, IPowerSupply powerSupply);
+
+        void Dematerialize(IGameObject material);
+
+        IGameObject Materialize();
     }
 }

@@ -50,6 +50,7 @@
     <Compile Include="Dhds\DhdBase.cs" />
     <Compile Include="Address\GateSymbol.cs" />
     <Compile Include="Dhds\IDhd.cs" />
+    <Compile Include="Dhds\StargateCommandDhd.cs" />
     <Compile Include="Gates\GateBase.cs" />
     <Compile Include="Gates\IGate.cs" />
     <Compile Include="IGameObject.cs" />
